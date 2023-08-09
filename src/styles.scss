@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "D-din";
+  src: url("/src/assets/fonts/FontsFree-Net-D-DINCondensed-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("/src/assets/fonts/FontsFree-Net-Circular-Std-Book.ttf");
+}
+
+@font-face {
+  font-family: "Mark-pro";
+  src: url("/src/assets/fonts/Mark-Pro.ttf");
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

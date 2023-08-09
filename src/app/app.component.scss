@@ -1,0 +1,170 @@
+// cursor
+.cursor {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  z-index: 129999;
+  background-image: url("../assets/svg/cursor.svg");
+  animation: rotateCursor 5s infinite linear;
+}
+
+
+// typography
+.dot{
+  vertical-align: sub;
+}
+.word-space {
+  word-spacing: 4px;
+}
+.letter-space {
+  letter-spacing: -0.45px;
+}
+.letter-spacing {
+  letter-spacing: -2.5px;
+  line-height: 1;
+}
+.horizontal-line {
+  height: 1px;
+}
+.add-gradient {
+  background: linear-gradient(
+    -45deg,
+    #6bc5f8,
+    rgb(207, 89, 230),
+    #6bc5f8,
+    rgb(207, 89, 230)
+  );
+  background-clip: text;
+  color: transparent;
+  animation: animated-text 4s ease infinite ;
+  background-size: 400%;
+  background-position: -100%;
+}
+
+.add-gradient-2 {
+  background: linear-gradient(90deg, #b0f3f1, #ffcfdf);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -1.4px;
+}
+
+
+// projects
+.vertical-writing {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.view-projects:hover + div {
+  width: 10rem;
+  transition: width 0.5s ease-in-out;
+}
+
+.visit-website:hover + div {
+  width: 11.5rem;
+  transition: width 0.5s ease-in-out;
+}
+.image-border {
+  border-radius: 50px;
+}
+.border-radius {
+  border-radius: 68px;
+}
+.figure {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  max-width: 324.8px;
+  margin: 0 auto;
+  background-size: cover;
+}
+.figure img.image-hover {
+ width: 100%;
+ height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.figure:hover img.image-hover {
+  opacity: 1;
+}
+
+.image-index {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+// animations declerations
+.animation {
+  animation: list-animation 10s ease-in-out infinite alternate;
+}
+.animation2 {
+  animation: list-animation2 10s ease-in-out infinite alternate;
+}
+.animation3 {
+  animation: music-on 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes animated-text{
+  from {
+    background-position: 0%;
+  }
+  to {
+   background-position: 100%;
+  }
+}
+
+@keyframes music-on {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+
+@keyframes list-animation {
+  from {
+    transform: translateX(-60%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes rotateCursor {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes list-animation2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-60%);
+  }
+}
+
+
+
+// media query
+@media screen and (max-width: 640px) {
+  .letter-spacing {
+    letter-spacing: -1.2px;
+    line-height: 1;
+  }
+}
